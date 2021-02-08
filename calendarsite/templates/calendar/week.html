@@ -1,0 +1,28 @@
+{% extends "calendar/calendar_base.html" %}
+
+{% block title %}{{ week.title }}{% endblock %}
+
+{% block content %}
+
+    <h1>{{ week.title }}</h1>
+
+    <div class="content">
+        <div class="row week">
+            {% for day in week.days %}
+            <div class="col day-of-week" style="border: 1px solid orange;">
+                <div class="row">
+                    <div class="col" style="background-color: #ffccaa;">
+                        {{ day.name }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        ...
+                    </div>
+                </div> 
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
